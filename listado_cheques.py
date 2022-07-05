@@ -22,7 +22,7 @@ if len(sys.argv) >= 6:
 cabecera = []
 cheques_filtrado = []
 
-with open(nombre_archivo_csv) as f:  # lo que estamos haciendo aqui es iterar linea por linea
+with open(nombre_archivo_csv) as f:  #iteramos linea por linea
     duplicados_por_dni = []
 
     reader = csv.reader(f)
@@ -39,8 +39,7 @@ with open(nombre_archivo_csv) as f:  # lo que estamos haciendo aqui es iterar li
         estado_linea = row[10]
 
         if (numero_de_cheque_linea, dni_linea) in duplicados_por_dni:
-            print('Dado el DNI {} existen numeros de cheques duplicados (nro. {}).'.format(dni_linea,
-                                                                                           numero_de_cheque_linea))
+            print('Dado el DNI {} existen numeros de cheques duplicados (nro. {}).'.format(dni_linea, numero_de_cheque_linea))
             sys.exit(1)
 
         duplicados_por_dni.append((numero_de_cheque_linea, dni_linea))
@@ -66,3 +65,6 @@ elif salida == 'CSV':
 
     with open(nombre_archivo_salida, 'w') as f:
         f.write("{},{},{},{}\n".format(cabecera[4], cabecera[5], cabecera[6], cabecera[7]))
+
+        for row in cheques_filtrado:
+            f.write("{},{},{},{}\n".format(row[4], row[5], row[6], row[7]))
