@@ -29,4 +29,10 @@ los argumentos son los siguientes y en el orden en que se nombran:
 5. Estado del cheque: PENDIENTE, APROBADO, RECHAZADO. (Opcional) 
 6. Rango fecha: xx-xx-xxxx:yy-yy-yyyy (Opcional) 
 
+## Lista de autores del proyecto
 
+1. Julian scarramberg
+2. Lara victoria Pereyra
+3. Rocio Ayelen Gómez
+4. Milena Fernández
+5. Daniel alejandro valbuena prieto
